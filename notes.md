@@ -77,10 +77,41 @@ Since *person_home_ownership* , *loan_intent*, *loan_grade*, and *cb_person_defa
 
 ### Decision Tree Classifier (Default)
 
+    Before tuning:
     Accuracy: 0.8868
     Precision: 0.7280
     Recall: 0.7628
     F1 Score: 0.7450
+
+    After tuning:
+    Accuracy: 0.9302
+    Precision: 0.9570
+    Recall: 0.7097
+    F1 Score: 0.8150
+
+
+
+![alt text](image-7.png)
+
+    'person_home_ownership_MORTGAGE' = 0 
+    'person_home_ownership_OTHER' = 1
+    'person_home_ownership_OWN' = 2 
+    'person_home_ownership_RENT' = 3
+    'loan_intent_DEBTCONSOLIDATION' = 4
+    'loan_intent_EDUCATION' = 5
+    'loan_intent_HOMEIMPROVEMENT' = 6
+    'loan_intent_MEDICAL' = 7
+    'loan_intent_PERSONAL' = 8 
+    'loan_intent_VENTURE' = 9 
+    'loan_grade_A' = 10
+    'loan_grade_B' = 11
+    'loan_grade_C' = 12 
+    'loan_grade_D' = 13 
+    'loan_grade_E' = 14
+    'loan_grade_F' = 15 
+    'loan_grade_G' = 16 
+    'cb_person_default_on_file_N' = 17
+    'cb_person_default_on_file_Y' = 18
 
 ### Random Forest Classifer (Default)
 
@@ -118,7 +149,7 @@ Since *person_home_ownership* , *loan_intent*, *loan_grade*, and *cb_person_defa
     Recall: 0.0779
     F1 Score: 0.1424
 
-### K-Nearest Neighbors (Default)
+### K-Nearest Neighbors (Default) [Removing]
 
     Accuracy: 0.8314
     Precision: 0.6409
@@ -192,4 +223,36 @@ Since *person_home_ownership* , *loan_intent*, *loan_grade*, and *cb_person_defa
     Recall: 0.6646
     F1 Score: 0.7439
 
-### Recursive Feature Elimination (RFE)
+### Recursive Feature Elimination (RFE) [20 features]
+
+    XGB
+    Accuracy: 0.9342
+    Precision: 0.9507
+    Recall: 0.7345
+    F1 Score: 0.8288
+
+    RF
+    Accuracy: 0.9355
+    Precision: 0.9818
+    Recall: 0.7159
+    F1 Score: 0.8280
+
+## Ensemble Techniques
+Decision Tree, Random Forest, and XGB
+
+### Voting Classifier
+
+    Voting Classifer
+    Accuracy: 0.9363
+    Precision: 0.9761
+    Recall: 0.7239
+    F1 Score: 0.8313
+
+### Stacking Classifer
+
+    Stacking Classifer
+    Accuracy: 0.9334
+    Precision: 0.9711
+    Recall: 0.7142
+    F1 Score: 0.8230
+
